@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Add Vehicle{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <p>Owner ID</p>
+        <select name="owner_id" class="selectpicker form-control">
+            {% for owner in data.owner_id_options %}
+                <option value="{{ owner }}">{{ owner }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <p>Color</p>
+        <select name="color" class="selectpicker form-control">
+            {% for color in data.color_options %}
+                <option value="{{ color }}">{{ color }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <p>Model</p>
+        <select name="model" class="selectpicker form-control">
+            {% for model in data.model_options %}
+                <option value="{{ model }}">{{ model }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+  </form>
+{% endblock %}

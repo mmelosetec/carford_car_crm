@@ -1,0 +1,4 @@
+include carford_car_crm/schema.sql
+graft carford_car_crm/static
+graft carford_car_crm/templates
+global-exclude *.pyc

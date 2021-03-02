@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}CRM APP{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% if g.user %}
+        <br>
+        <a href="{{ url_for('crm_app.add_person') }}">Add Person</a>
+        <br>
+        <br>
+        <a href="{{ url_for('crm_app.add_vehicle') }}">Add Vehicle</a>
+        <br>
+    {% endif %}
+{% endblock %}
